@@ -1,0 +1,38 @@
+
+public class challenge1 {
+
+	public static int prebroj(int broj) {
+		int brojac = 1;
+		while(broj != 1) {
+			brojac++;
+			if(broj%2 == 0) {
+				broj = broj/2;
+			}
+			else {
+				broj = 3*broj + 1;
+			}
+		}
+		return brojac;
+	}
+	public challenge1() {
+	}
+
+	public static void main(String[] args) {
+		int max = 0;
+		int start = 900;
+		int finish = 1000;
+		for(int i = start;i<finish;i++) {
+			int temp = prebroj(i);
+			if(temp > max) {
+				max = temp;
+			}
+		}
+		
+		System.out.println(start + " " + finish+ " " + max);
+
+	}
+
+
+}
+
+
